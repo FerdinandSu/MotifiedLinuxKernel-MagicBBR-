@@ -14,6 +14,9 @@ echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
 echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
 sysctl -p
 
+You can just use my ChangeKernel Scripts in Scripts/
+Make sure you download the right shell script for your OS.
+
 2.Use Kernel Module
 you can compile by yourself(use Makefile and .c in make/) with：
 make -C /lib/modules/$(uname -r)/build M=`pwd` modules CC=/usr/bin/gcc
